@@ -28,10 +28,12 @@ const init = async () => {
 
   server.route({
     method: "GET",
-    path: "/hello",
+    path: "/{42*}",
     handler: function (request, h) {
+    // 数据可能来源于服务，数据库等
+    const data={text:'World'};
 
-    return html({html:renderToString(<Hello text="小红!!" />)})
+    return html({data:`window.__DATA__=${JSON.stringify(data)}`,html:renderToString(<Hello text={data.text} />)})
     },
   });
 

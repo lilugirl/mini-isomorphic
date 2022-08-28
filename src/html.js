@@ -3,6 +3,7 @@ module.exports = function (context) {
     <html lang='en'>
        <head>
           <meta charSet='utf-8'/>
+          <script>${context.data}</script>
        </head>
        <body>
        <div id="content">${context?.html}</div>

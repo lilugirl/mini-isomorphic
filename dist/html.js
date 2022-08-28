@@ -1,1 +1,1 @@
-"use strict";module.exports=function(n){return"\n    <html lang='en'>\n       <head>\n          <meta charSet='utf-8'/>\n       </head>\n       <body>\n       <div id=\"content\">".concat(null==n?void 0:n.html,"</div>\n       </body>\n    </html>\n    ")};
+"use strict";module.exports=function(n){return"\n    <html lang='en'>\n       <head>\n          <meta charSet='utf-8'/>\n          <script>".concat(n.data,'<\/script>\n       </head>\n       <body>\n       <div id="content">').concat(null==n?void 0:n.html,"</div>\n       </body>\n    </html>\n    ")};
