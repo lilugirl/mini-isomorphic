@@ -1,8 +1,6 @@
 const { watch, series, src, dest} =require('gulp');
-const babelify=require('babelify');
+const babel=require('gulp-babel');
 const uglify=require('gulp-uglify');
-const browserify=require('browserify');
-const source=require('vinyl-source-stream');
 var nodemon=require('gulp-nodemon');
 
 function clean(cb){
@@ -15,12 +13,9 @@ function clean(cb){
 function javascript(){
     // body omitted
     console.log('watch javascript');
-    browserify('src/index.js')
-    .transform(babelify,{
-        presets:['react']
-    })
-    .bundle()
-    .pipe(source('index.js'))
+    return src('src/*.js')
+    .pipe(babel({presets:["@babel/preset-env","@babel/preset-react"]}))
+    .pipe(uglify())
     .pipe(dest('dist/'));
    
 }

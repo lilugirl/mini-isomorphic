@@ -1,10 +1,1 @@
-module.exports=function(t){return`
-    <html lang='en'>
-       <head>
-          <meta charSet='utf-8'/>
-       </head>
-       <body>
-       <div id="content">${t?.html}</div>
-       </body>
-    </html>
-    `};
+"use strict";module.exports=function(n){return"\n    <html lang='en'>\n       <head>\n          <meta charSet='utf-8'/>\n       </head>\n       <body>\n       <div id=\"content\">".concat(null==n?void 0:n.html,"</div>\n       </body>\n    </html>\n    ")};

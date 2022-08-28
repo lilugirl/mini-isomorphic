@@ -6,7 +6,7 @@ var html=require('./html')
 
 class Hello extends React.Component{
     render(){
-        return <div>你好 {this.props.text}!</div>;
+        return <div>你好 {this.props.text}</div>;
     }
 }
 console.log('renderToString',renderToString);
@@ -31,7 +31,7 @@ const init = async () => {
     path: "/hello",
     handler: function (request, h) {
 
-    return html({html:renderToString(<Hello text="小王" />)})
+    return html({html:renderToString(<Hello text="小红!!" />)})
     },
   });
 
